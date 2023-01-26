@@ -1,6 +1,6 @@
 # Back-end Challenge 🏅 2021 - Space Flight News
 
-Desenvolvimento da REST API utilizando os dados da Space Flight News, será realizado em Laravel PHP. 
+Desenvolvimento da REST API utilizando os dados da Space Flight News, realizado em Laravel PHP. 
 
 ## Tecnologias
 
