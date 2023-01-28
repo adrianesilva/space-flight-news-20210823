@@ -7,14 +7,7 @@ use App\Models\Articles;
 
 class ArticlesController extends Controller
 {
-    //
-    public function listArticles(){
 
-        foreach (Articles::all() as $article) {
-            return $article->title;
-        }
-        
-    }
 
     public function saveArticles(){
 
@@ -24,20 +17,24 @@ class ArticlesController extends Controller
 
         foreach($apiArticles as $article){
             
-            $articleDB->id = $article->id;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-            $articleDB->title = $article->title;
-     
-            $articleDB->save();
-        }
+            $launches = implode(',',$article->launches);
+            $events = implode(',',$article->events);
 
+            $result = Articles::firstOrCreate(
+                ['id' => $article->id,
+                'featured' => $article->featured,
+                'title' => $article->title,
+                'url' => $article->url,
+                'imageUrl' => $article->imageUrl,
+                'newsSite' => $article->newsSite,
+                'summary' => $article->summary,
+                'publishedAt' => $article->publishedAt,
+                'launches' => $launches,
+                'events' => $events
+                ]
+           );
+   
+        }
+        
     }
 }

@@ -15,15 +15,15 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('featured');
+            $table->boolean('featured')->default(0);
             $table->string('title');
-            $table->string('url');
-            $table->string('imageUrl');
-            $table->string('newsSite');
-            $table->string('summary');
-            $table->string('publishedAt');
-            $table->string('launcher');
-            $table->string('events');
+            $table->string('url')->nullable();
+            $table->string('imageUrl')->nullable();
+            $table->string('newsSite')->nullable();
+            $table->string('summary',500)->nullable();
+            $table->string('publishedAt')->nullable();
+            $table->string('launches')->nullable();
+            $table->string('events')->nullable();
             $table->timestamps();
         });
     }

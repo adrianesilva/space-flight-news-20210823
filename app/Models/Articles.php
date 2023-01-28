@@ -9,5 +9,6 @@ class Articles extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = ['id','title','url','featured','imageUrl','newsSite','summary','publishedAt','launches','events'];
+
 }
