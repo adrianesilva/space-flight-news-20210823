@@ -4,9 +4,10 @@ Desenvolvimento da REST API utilizando os dados da Space Flight News, realizado 
 
 ## Tecnologias
 
-PHP
-Laravel
-MySql
+PHP<br />
+Laravel<br />
+MySql<br />
+Composer
 
 
 ## Instalação
